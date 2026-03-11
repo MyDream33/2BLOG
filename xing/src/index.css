@@ -83,11 +83,13 @@ body {
 }
 
 .article-content h2 {
-  @apply text-2xl font-bold mt-10 mb-4 text-foreground;
+  @apply text-2xl font-bold mt-10 mb-4;
+  color: hsl(var(--foreground));
 }
 
 .article-content h3 {
-  @apply text-xl font-semibold mt-8 mb-3 text-foreground;
+  @apply text-xl font-semibold mt-8 mb-3;
+  color: hsl(var(--foreground));
 }
 
 .article-content p {
@@ -114,15 +116,19 @@ body {
 }
 
 .article-content blockquote {
-  @apply border-l-4 border-primary pl-6 italic my-6 text-muted-foreground;
+  @apply border-l-4 pl-6 italic my-6;
+  border-color: hsl(var(--primary));
+  color: hsl(var(--muted-foreground));
 }
 
 .article-content pre {
-  @apply bg-secondary p-4 rounded-lg overflow-x-auto my-6 text-sm;
+  @apply p-4 rounded-lg overflow-x-auto my-6 text-sm;
+  background-color: hsl(var(--secondary));
 }
 
 .article-content code {
-  @apply bg-secondary px-1.5 py-0.5 rounded text-sm;
+  @apply px-1.5 py-0.5 rounded text-sm;
+  background-color: hsl(var(--secondary));
 }
 
 .article-content pre code {
