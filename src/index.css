@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 220 14% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 14% 10%;
+  --primary: 220 14% 10%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 220 14% 10%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 10% 46%;
+  --accent: 220 14% 96%;
+  --accent-foreground: 220 14% 10%;
+  --border: 220 14% 90%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 220 14% 8%;
+  --foreground: 220 14% 96%;
+  --card: 220 14% 12%;
+  --card-foreground: 220 14% 96%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 220 14% 10%;
+  --secondary: 220 14% 18%;
+  --secondary-foreground: 220 14% 96%;
+  --muted: 220 14% 18%;
+  --muted-foreground: 220 10% 60%;
+  --accent: 220 14% 18%;
+  --accent-foreground: 220 14% 96%;
+  --border: 220 14% 20%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', Georgia, serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--foreground) / 0.5);
+}
+
+/* Article content styles */
+.article-content {
+  @apply font-serif text-lg leading-relaxed;
+}
+
+.article-content h2 {
+  @apply text-2xl font-bold mt-10 mb-4 text-foreground;
+}
+
+.article-content h3 {
+  @apply text-xl font-semibold mt-8 mb-3 text-foreground;
+}
+
+.article-content p {
+  @apply mb-6 text-foreground/90;
+}
+
+.article-content a {
+  @apply text-primary underline underline-offset-4 hover:text-primary/80 transition-colors;
+}
+
+.article-content ul,
+.article-content ol {
+  @apply mb-6 pl-6;
+}
+
+.article-content li {
+  @apply mb-2;
+}
+
+.article-content blockquote {
+  @apply border-l-4 border-primary pl-6 italic my-6 text-muted-foreground;
+}
+
+.article-content pre {
+  @apply bg-secondary p-4 rounded-lg overflow-x-auto my-6 text-sm;
+}
+
+.article-content code {
+  @apply bg-secondary px-1.5 py-0.5 rounded text-sm;
+}
+
+.article-content pre code {
+  @apply bg-transparent p-0;
+}
+
+.article-content img {
+  @apply rounded-lg my-6 w-full;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
