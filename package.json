@@ -1,0 +1,10 @@
+{
+  "name": "2blog-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix xing",
+    "build": "npm run build --prefix xing",
+    "preview": "npm run preview --prefix xing",
+    "install:xing": "cd xing && npm install"
+  }
+}
