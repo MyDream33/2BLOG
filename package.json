@@ -1,12 +1,11 @@
 {
-  "name": "2blog-workspace",
+  "name": "2blog-react",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "cd xing && pnpm run dev",
-    "build": "cd xing && pnpm run build",
-    "preview": "cd xing && pnpm run preview",
-    "postinstall": "cd xing && pnpm install"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.3.1",
