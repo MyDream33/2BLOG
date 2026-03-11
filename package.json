@@ -2,12 +2,11 @@
   "name": "2blog-workspace",
   "private": true,
   "type": "module",
-  "workspaces": ["xing"],
   "scripts": {
-    "dev": "cd xing && npm run dev",
-    "build": "cd xing && npm run build",
-    "preview": "cd xing && npm run preview",
-    "postinstall": "cd xing && npm install"
+    "dev": "cd xing && pnpm run dev",
+    "build": "cd xing && pnpm run build",
+    "preview": "cd xing && pnpm run preview",
+    "postinstall": "cd xing && pnpm install"
   },
   "dependencies": {
     "react": "^18.3.1",
