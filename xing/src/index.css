@@ -91,11 +91,17 @@ body {
 }
 
 .article-content p {
-  @apply mb-6 text-foreground/90;
+  @apply mb-6;
+  color: hsl(var(--foreground) / 0.9);
 }
 
 .article-content a {
-  @apply text-primary underline underline-offset-4 hover:text-primary/80 transition-colors;
+  @apply underline underline-offset-4 transition-colors;
+  color: hsl(var(--primary));
+}
+
+.article-content a:hover {
+  color: hsl(var(--primary) / 0.8);
 }
 
 .article-content ul,
